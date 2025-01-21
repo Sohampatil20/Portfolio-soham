@@ -219,7 +219,7 @@ import {
     {
       name: "AUTH page",
       description:
-        "Auth is best for any localhost projects,contains features like JWT Authentication cookie-parsing Profile creation Different themes Best interactive UI and Technolgies like MERN stack DaisyUI TailwindCSS socket.io",
+        "Auth page is best for any project,contains features like JWT Authentication cookie-parsing Profile creation Different themes Best and UI and Technolgies like MERN stack DaisyUI TailwindCSS",
       tags: [
         {
           name: "MERN",
@@ -235,7 +235,7 @@ import {
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/Sohampatil20/mern-Auth",
+      source_code_link: "https://mern-auth-henna.vercel.app",
     },
     // {
     //   name: "Trip Guide",
