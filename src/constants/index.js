@@ -42,15 +42,15 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Web Development",
       icon: web,
     },
     {
-      title: "Mobile App Developer",
+      title: "MERN stack",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "MobileApp Development",
       icon: backend,
     },
     {
@@ -149,21 +149,21 @@ import {
     
    
     
-    {
-      title: "System Design",
-      company_name: "studying",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2025 - Present",
-      points: [
-        "Mastering the principles of designing scalable, reliable, and maintainable systems for high-traffic applications.",
-        "Developing expertise in breaking down complex systems into modular components using microservices architecture.",
-        "Implementing database design strategies, including normalization, denormalization, and distributed database systems like NoSQL and SQL.",
-        "Understanding the importance of load balancing, caching strategies, and fault-tolerant systems to enhance performance and reliability.",
-        "Evaluating trade-offs between consistency, availability, and partition tolerance (CAP theorem) when designing distributed systems.",
+    // {
+    //   title: "System Design",
+    //   company_name: "studying",
+    //   icon: meta,
+    //   iconBg: "#E6DEDD",
+    //   date: "Jan 2025 - Present",
+    //   points: [
+    //     "Mastering the principles of designing scalable, reliable, and maintainable systems for high-traffic applications.",
+    //     "Developing expertise in breaking down complex systems into modular components using microservices architecture.",
+    //     "Implementing database design strategies, including normalization, denormalization, and distributed database systems like NoSQL and SQL.",
+    //     "Understanding the importance of load balancing, caching strategies, and fault-tolerant systems to enhance performance and reliability.",
+    //     "Evaluating trade-offs between consistency, availability, and partition tolerance (CAP theorem) when designing distributed systems.",
         
-      ],
-    },
+    //   ],
+    // },
     
   ];
   
