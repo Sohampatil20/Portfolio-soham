@@ -16,21 +16,32 @@ const Hero = () => {
         backgroundColor: "#050816",
       }}
     >
-      {/* Hero text */}
+      {/* 3D COMPUTER - must receive mouse events */}
+      <div className="absolute inset-0 z-10 pointer-events-auto">
+        <ComputersCanvas />
+      </div>
+
+      {/* HERO TEXT - does NOT block mouse interaction */}
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-20 pointer-events-none`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
+
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I&apos;m <span className="text-[#915EFF]">Soham</span>
+            Hi, I&apos;m{" "}
+            <span className="text-[#915EFF]">
+              Soham
+            </span>
           </h1>
 
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p
+            className={`${styles.heroSubText} mt-2 text-white-100`}
+          >
             AI & Full-Stack Developer building{" "}
             <br className="sm:block hidden" />
             web apps, backend APIs, and AI workflows
@@ -38,12 +49,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Keep the 3D canvas in the same structure as the original working Hero */}
-      <ComputersCanvas />
-
-      {/* Scroll indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
-        <a href="#about">
+      {/* SCROLL BUTTON */}
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30 pointer-events-none">
+        <a
+          href="#about"
+          className="pointer-events-auto"
+        >
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{
