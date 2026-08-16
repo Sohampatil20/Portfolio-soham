@@ -6,25 +6,19 @@ import herobg from "../assets/herobg.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto overflow-hidden bg-primary">
-      {/* Background image */}
-      <img
-        src={herobg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[#050816]/55 z-10" />
-
-      {/* 3D computer canvas */}
-      <div className="absolute inset-0 z-20 pointer-events-none hero-canvas">
-        <ComputersCanvas />
-      </div>
-
+    <section
+      className="relative w-full h-screen mx-auto overflow-hidden"
+      style={{
+        backgroundImage: `url(${herobg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "#050816",
+      }}
+    >
       {/* Hero text */}
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-30`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -32,19 +26,23 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white drop-shadow-lg`}>
+          <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I&apos;m <span className="text-[#915EFF]">Soham</span>
           </h1>
 
-          <p className={`${styles.heroSubText} mt-2 text-white-100 drop-shadow-md`}>
-            AI & Full-Stack Developer building <br className="sm:block hidden" />
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            AI & Full-Stack Developer building{" "}
+            <br className="sm:block hidden" />
             web apps, backend APIs, and AI workflows
           </p>
         </div>
       </div>
 
+      {/* Keep the 3D canvas in the same structure as the original working Hero */}
+      <ComputersCanvas />
+
       {/* Scroll indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-40">
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
