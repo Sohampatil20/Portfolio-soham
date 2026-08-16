@@ -2,10 +2,16 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import herobg from "../assets/herobg.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto bg-hero-pattern bg-cover bg-no-repeat bg-center overflow-hidden">
+    <section
+      className="relative w-full h-screen mx-auto overflow-hidden bg-cover bg-no-repeat bg-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.35), rgba(5, 8, 22, 0.55)), url(${herobg})`,
+      }}
+    >
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
       >
@@ -26,7 +32,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <div className="relative z-0">
+        <ComputersCanvas />
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
         <a href="#about">
