@@ -18,53 +18,49 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      variants={fadeIn(
-        "up",
-        "spring",
-        index * 0.15,
-        0.65
-      )}
+      variants={fadeIn("up", "spring", index * 0.1, 0.6)}
+      className="w-full min-w-0"
     >
       <Tilt
         options={{
-          max: 25,
-          scale: 1.02,
-          speed: 450,
+          max: 20,
+          scale: 1,
+          speed: 400,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full"
+        className="w-full h-full"
       >
-        {/* PROJECT IMAGE */}
-        <div
-          className="
-            relative
-            w-full
-            h-[230px]
-            rounded-2xl
-            bg-[#0d0d16]
-            border
-            border-white/10
-            flex
-            justify-center
-            items-center
-            overflow-hidden
-          "
-        >
-          <img
-            src={image}
-            alt={`${name} project`}
+        <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full h-full overflow-hidden">
+          
+          {/* PROJECT IMAGE */}
+          <div
             className="
-              w-[105px]
-              h-[105px]
-              object-contain
-              opacity-90
-              transition-all
-              duration-300
-              hover:scale-110
+              relative
+              w-full
+              h-[180px]
+              sm:h-[220px]
+              rounded-2xl
+              bg-[#0d0d16]
+              border
+              border-white/10
+              flex
+              items-center
+              justify-center
+              overflow-hidden
             "
-          />
+          >
+            <img
+              src={image}
+              alt={name}
+              className="
+                w-[85px]
+                h-[85px]
+                sm:w-[105px]
+                sm:h-[105px]
+                object-contain
+              "
+            />
 
-          {/* OPEN PROJECT */}
-          <div className="absolute top-3 right-3">
+            {/* LINK BUTTON */}
             <button
               type="button"
               onClick={() =>
@@ -75,18 +71,18 @@ const ProjectCard = ({
                 )
               }
               className="
+                absolute
+                top-3
+                right-3
                 black-gradient
-                w-11
-                h-11
+                w-10
+                h-10
                 rounded-full
                 flex
                 justify-center
                 items-center
                 cursor-pointer
-                hover:scale-110
-                transition-transform
               "
-              aria-label={`Open ${name}`}
             >
               <img
                 src={github}
@@ -94,68 +90,63 @@ const ProjectCard = ({
                 className="w-1/2 h-1/2 object-contain"
               />
             </button>
-          </div>
 
-          {/* PROJECT NAME OVER IMAGE */}
-          <div className="absolute bottom-4 left-4 right-4">
-            <p className="text-secondary text-[11px] uppercase tracking-[0.25em]">
+            <p className="absolute bottom-4 left-4 text-secondary text-[10px] sm:text-[11px] uppercase tracking-[0.2em]">
               Featured Project
             </p>
           </div>
-        </div>
 
-        {/* TEXT */}
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[23px]">
-            {name}
-          </h3>
+          {/* CONTENT */}
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[20px] sm:text-[23px] break-words">
+              {name}
+            </h3>
 
-          <p className="mt-2 text-secondary text-[14px] leading-[22px]">
-            {description}
-          </p>
-        </div>
-
-        {/* TAGS */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[13px] ${tag.color}`}
-            >
-              #{tag.name}
+            <p className="mt-2 text-secondary text-[13px] sm:text-[14px] leading-[21px] sm:leading-[22px] break-words">
+              {description}
             </p>
-          ))}
-        </div>
+          </div>
 
-        {/* BUTTON */}
-        <button
-          type="button"
-          onClick={() =>
-            window.open(
-              source_code_link,
-              "_blank",
-              "noopener,noreferrer"
-            )
-          }
-          className="
-            mt-5
-            w-full
-            py-2.5
-            rounded-xl
-            bg-black-100
-            border
-            border-white/10
-            text-white
-            text-[13px]
-            font-semibold
-            hover:border-[#915EFF]
-            hover:bg-[#211a40]
-            transition-all
-            duration-300
-          "
-        >
-          View Project ↗
-        </button>
+          {/* TAGS */}
+          <div className="mt-4 flex flex-wrap gap-x-3 gap-y-1">
+            {tags.map((tag) => (
+              <p
+                key={`${name}-${tag.name}`}
+                className={`text-[12px] sm:text-[13px] ${tag.color}`}
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+
+          {/* BUTTON */}
+          <button
+            type="button"
+            onClick={() =>
+              window.open(
+                source_code_link,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+            className="
+              mt-5
+              w-full
+              py-3
+              rounded-xl
+              bg-black-100
+              border
+              border-white/10
+              text-white
+              text-[13px]
+              font-semibold
+              hover:border-[#915EFF]
+              transition-all
+            "
+          >
+            View Project ↗
+          </button>
+        </div>
       </Tilt>
     </motion.div>
   );
@@ -174,27 +165,42 @@ const Works = () => {
         </h2>
       </motion.div>
 
-      <div className="w-full flex">
+      <div className="w-full">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="
             mt-3
             text-secondary
-            text-[17px]
+            text-[15px]
+            sm:text-[17px]
             max-w-3xl
-            leading-[28px]
+            leading-[25px]
+            sm:leading-[28px]
           "
         >
-          A selection of full-stack, AI, cloud, and
-          production projects I have designed, built, and
-          deployed.
+          A selection of full-stack, AI, cloud, and production
+          projects I have designed, built, and deployed.
         </motion.p>
       </div>
 
-      <div className="mt-14 flex flex-wrap gap-7">
+      {/* RESPONSIVE PROJECT GRID */}
+      <div
+        className="
+          mt-10
+          sm:mt-14
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          xl:grid-cols-3
+          gap-6
+          sm:gap-7
+          w-full
+          min-w-0
+        "
+      >
         {projects.map((project, index) => (
           <ProjectCard
-            key={`project-${index}`}
+            key={`${project.name}-${index}`}
             index={index}
             {...project}
           />
