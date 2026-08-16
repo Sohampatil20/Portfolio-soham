@@ -46,6 +46,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-white text-[20px] max-w-3xl leading-[30px]'
       >
+        I&apos;m an AI & Full-Stack Developer currently working with React,
+  TypeScript, ASP.NET Core, SQL, backend APIs, dashboards, authentication
+  flows, database models, and AI-assisted workflows. I enjoy building
+  practical software products end to end — from frontend interfaces and
+  backend services to database design, AI integration, deployment, and
+  production debugging. I&apos;m also diving deeper into DevOps, CI/CD,
+  Docker, cloud deployment, monitoring, and production infrastructure to
+  build more reliable and scalable systems.
        
       </motion.p>
 
