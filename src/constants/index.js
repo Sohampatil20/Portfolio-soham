@@ -3,26 +3,19 @@ import {
   backend,
   creator,
   web,
-  javascript,
   typescript,
-  html,
-  css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
   shopify,
+  tesla,
+  starbucks,
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +39,7 @@ const services = [
     icon: web,
   },
   {
-    title: ".NET Backend Development",
+    title: ".NET & Backend APIs",
     icon: backend,
   },
   {
@@ -61,23 +54,11 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
     name: "TypeScript",
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "React",
     icon: reactjs,
   },
   {
@@ -89,11 +70,11 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "Node.js",
     icon: nodejs,
   },
   {
-    name: "Express JS",
+    name: "Express.js",
     icon: nodejs,
   },
   {
@@ -113,11 +94,11 @@ const technologies = [
     icon: backend,
   },
   {
-    name: "Groq / OpenAI / Gemini",
+    name: "AI / LLMs",
     icon: creator,
   },
   {
-    name: "LangGraph / LangChain",
+    name: "RAG / Agents",
     icon: creator,
   },
   {
@@ -138,10 +119,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Apr 2026 - Present",
     points: [
-      "Building a full-stack product using React, TypeScript, ASP.NET Core, SQL, backend APIs, dashboards, authentication flows, and AI-assisted workflows.",
-      "Owning end-to-end development across UI components, backend APIs, database models, authentication, dashboards, and production bug fixes.",
-      "Working with .NET backend services, SQL-based data models, role-based workflows, and production-ready frontend interfaces.",
-      "Actively diving deeper into DevOps, cloud deployment, CI/CD, Docker, monitoring, and production infrastructure.",
+      "Building production features using React, TypeScript, ASP.NET Core, SQL, backend APIs, dashboards, authentication flows, and AI-assisted workflows.",
+      "Owning end-to-end development across UI components, backend APIs, database models, role-based workflows, and production bug fixes.",
+      "Currently diving deeper into DevOps, cloud deployment, CI/CD, Docker, monitoring, and production infrastructure.",
     ],
   },
   {
@@ -152,8 +132,7 @@ const experiences = [
     date: "2025 - Present",
     points: [
       "Building a secure freelancer escrow payments platform using React, Node.js, Supabase, and Razorpay.",
-      "Implemented escrow hold-release logic, role-based access control, transaction verification workflows, and payment integration flows.",
-      "Developing production-ready user flows for clients, freelancers, payments, disputes, and admin review processes.",
+      "Implemented escrow hold-release logic, RBAC, transaction verification workflows, and payment integration flows.",
     ],
   },
   {
@@ -164,44 +143,18 @@ const experiences = [
     date: "Jun 2025 - Jul 2025",
     points: [
       "Completed a 2-month internship focused on applications of Artificial Intelligence.",
-      "Built AI Job Helper, an AI-powered job assistance platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support.",
-      "Worked on AI/ML concepts, preprocessing, experimentation, model integration, and real-world AI case studies.",
+      "Built AI Job Helper, an AI-powered platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "Soham consistently builds practical software products that combine full-stack development, AI workflows, and real-world problem solving.",
-    name: "Project Review",
-    designation: "Full-Stack AI Work",
-    company: "Portfolio",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    testimonial:
-      "His work shows strong hands-on experience across React, TypeScript, .NET, SQL, Supabase, cloud deployment, and AI-assisted systems.",
-    name: "Technical Review",
-    designation: "AI & Backend Systems",
-    company: "Portfolio",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    testimonial:
-      "Soham focuses on shipping complete products, not just demos — from UI and APIs to deployment, storage, authentication, and AI integration.",
-    name: "Product Review",
-    designation: "Software Projects",
-    company: "Portfolio",
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
-  },
-];
+const testimonials = [];
 
 const projects = [
   {
     name: "Sohamfolio",
     description:
-      "AI-powered portfolio builder that converts uploaded PDF resumes into editable, themed, and publishable personal portfolio websites using Next.js, Groq, Clerk, Supabase, and Vercel.",
+      "AI-powered portfolio builder that converts PDF resumes into editable, themed, and publishable personal portfolio websites using Next.js, Groq, Clerk, Supabase, and Vercel.",
     tags: [
       {
         name: "NextJS",
@@ -222,7 +175,7 @@ const projects = [
   {
     name: "AI Research Assistant",
     description:
-      "A multi-agent RAG platform with document ingestion, chunking, Hugging Face embeddings, FAISS vector search, LangGraph orchestration, LLM inference, and SQLite-backed conversational memory.",
+      "Multi-agent RAG platform with document ingestion, chunking, embeddings, FAISS vector search, LangGraph orchestration, LLM inference, and SQLite-backed conversational memory.",
     tags: [
       {
         name: "RAG",
@@ -243,7 +196,7 @@ const projects = [
   {
     name: "Serverless Cloud Cost Optimizer",
     description:
-      "IEEE-published AWS cloud cost optimization and monitoring system using CloudWatch metrics, Cost Explorer API, FastAPI, Boto3, and a Flutter-based analytics dashboard.",
+      "IEEE-published AWS cloud cost optimization and monitoring system using CloudWatch metrics, Cost Explorer API, FastAPI, Boto3, and a Flutter dashboard.",
     tags: [
       {
         name: "AWS",
@@ -264,7 +217,7 @@ const projects = [
   {
     name: "AI Job Helper",
     description:
-      "AI-powered job assistance platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support using Google Gemini API and Streamlit deployment.",
+      "AI-powered job assistance platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support using Google Gemini API and Streamlit.",
     tags: [
       {
         name: "Gemini",
@@ -285,7 +238,7 @@ const projects = [
   {
     name: "Escrowwall",
     description:
-      "Secure freelancer escrow payments platform with hold-release payment logic, RBAC, transaction verification workflows, Supabase backend, and Razorpay payment integration.",
+      "Secure freelancer escrow payments platform with hold-release payment logic, RBAC, transaction verification workflows, Supabase backend, and Razorpay integration.",
     tags: [
       {
         name: "React",
