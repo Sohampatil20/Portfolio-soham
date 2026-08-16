@@ -46,11 +46,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-white text-[20px] max-w-3xl leading-[30px]'
       >
-        I'm a Web developer with experience in TypeScript and
-        JavaScript, and experiences in frameworks like React, Node.js, and
-        Three.js, expressJs, MongoDB, NextJs. I'm a quick learner and focus on creating 
-        efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+       I am an AI & Full-Stack Developer currently working with React,
+  TypeScript, ASP.NET Core, SQL, backend APIs, dashboards, authentication
+  flows, database models, and AI-assisted workflows. I build practical
+  software products end to end — from UI and API development to database
+  design, AI integration, deployment, and production debugging. I&apos;m also
+  actively diving deeper into DevOps, cloud deployment, CI/CD, Docker,
+  monitoring, and production infrastructure to build more reliable and
+  scalable systems.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
