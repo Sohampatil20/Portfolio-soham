@@ -3,26 +3,23 @@ import {
   backend,
   creator,
   web,
+
   javascript,
   typescript,
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
+
   shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  tesla,
+  starbucks,
+
+  github,
 } from "../assets";
 
 export const navLinks = [
@@ -40,13 +37,17 @@ export const navLinks = [
   },
 ];
 
+/* ------------------------------------------------ */
+/* SERVICES */
+/* ------------------------------------------------ */
+
 const services = [
   {
-    title: "AI & Full-Stack Developer",
+    title: "AI & Full-Stack Development",
     icon: web,
   },
   {
-    title: ".NET Backend Development",
+    title: ".NET & Backend Development",
     icon: backend,
   },
   {
@@ -54,10 +55,23 @@ const services = [
     icon: creator,
   },
   {
-    title: "DevOps & Cloud Deployment",
+    title: "DevOps & Cloud",
     icon: mobile,
   },
 ];
+
+/* ------------------------------------------------ */
+/* TECHNOLOGIES */
+/* ------------------------------------------------ */
+
+/*
+  IMPORTANT:
+
+  Keep this list reasonably small because every technology
+  creates its own Three.js/WebGL BallCanvas.
+
+  These 10 have actual matching logo assets.
+*/
 
 const technologies = [
   {
@@ -81,14 +95,6 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Next.js",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -97,28 +103,8 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "Express JS",
-    icon: nodejs,
-  },
-  {
-    name: "ASP.NET Core",
-    icon: backend,
-  },
-  {
-    name: "SQL Server",
-    icon: backend,
-  },
-  {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "Supabase",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "Docker",
@@ -128,11 +114,11 @@ const technologies = [
     name: "Git",
     icon: git,
   },
-  {
-    name: "Figma",
-    icon: figma,
-  },
 ];
+
+/* ------------------------------------------------ */
+/* EXPERIENCE */
+/* ------------------------------------------------ */
 
 const experiences = [
   {
@@ -143,11 +129,11 @@ const experiences = [
     date: "Apr 2026 - Present",
     points: [
       "Building production features using React, TypeScript, ASP.NET Core, SQL, backend APIs, dashboards, authentication flows, and AI-assisted workflows.",
-      "Owning end-to-end development across UI components, backend APIs, database models, role-based workflows, and production bug fixes.",
-      "Working with .NET backend services, SQL-based data models, dashboard interfaces, authentication flows, and production-ready frontend features.",
-      "Currently diving deeper into DevOps, cloud deployment, CI/CD, Docker, monitoring, and production infrastructure.",
+      "Owning end-to-end development across frontend interfaces, backend APIs, database models, authentication, dashboards, and production bug fixes.",
+      "Working across full-stack product development while actively expanding into DevOps, CI/CD, Docker, monitoring, cloud deployment, and production infrastructure.",
     ],
   },
+
   {
     title: "Founder / Full-Stack Developer",
     company_name: "Escrowwall",
@@ -156,10 +142,10 @@ const experiences = [
     date: "2025 - Present",
     points: [
       "Building a secure freelancer escrow payments platform using React, Node.js, Supabase, and Razorpay.",
-      "Implemented escrow hold-release logic, role-based access control, transaction verification workflows, and payment integration flows.",
-      "Developing production-ready user flows for clients, freelancers, payments, disputes, and admin review processes.",
+      "Implemented escrow hold-release logic, RBAC, transaction verification workflows, and payment integration flows.",
     ],
   },
+
   {
     title: "AI Intern",
     company_name: "SAKEC-ACM Student Chapter",
@@ -168,44 +154,28 @@ const experiences = [
     date: "Jun 2025 - Jul 2025",
     points: [
       "Completed a 2-month internship focused on applications of Artificial Intelligence.",
-      "Built AI Job Helper, an AI-powered job assistance platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support.",
+      "Built AI Job Helper, an AI-powered platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support.",
       "Worked on AI/ML concepts, preprocessing, experimentation, model integration, and real-world AI case studies.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "Soham builds practical products that combine full-stack engineering, AI workflows, cloud deployment, and real-world problem solving.",
-    name: "Project Review",
-    designation: "Full-Stack AI Work",
-    company: "Portfolio",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    testimonial:
-      "His work shows hands-on experience across React, TypeScript, .NET, SQL, Supabase, cloud deployment, and AI-assisted systems.",
-    name: "Technical Review",
-    designation: "AI & Backend Systems",
-    company: "Portfolio",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    testimonial:
-      "Soham focuses on shipping complete products, from UI and APIs to deployment, storage, authentication, and AI integration.",
-    name: "Product Review",
-    designation: "Software Projects",
-    company: "Portfolio",
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
-  },
-];
+/* ------------------------------------------------ */
+/* TESTIMONIALS */
+/* ------------------------------------------------ */
+
+const testimonials = [];
+
+/* ------------------------------------------------ */
+/* PROJECTS */
+/* ------------------------------------------------ */
 
 const projects = [
   {
     name: "Sohamfolio",
     description:
-      "AI-powered portfolio builder that converts uploaded PDF resumes into editable, themed, and publishable personal portfolio websites using Next.js, Groq, Clerk, Supabase, and Vercel.",
+      "AI-powered portfolio builder that converts PDF resumes into editable, themed, and publishable portfolio websites using Next.js, Groq, Clerk, Supabase, and Vercel.",
+
     tags: [
       {
         name: "NextJS",
@@ -220,13 +190,18 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://ai-portfolio-builder-vert.vercel.app",
+
+    image: github,
+
+    source_code_link:
+      "https://ai-portfolio-builder-vert.vercel.app",
   },
+
   {
     name: "AI Research Assistant",
     description:
-      "Multi-agent RAG platform with document ingestion, chunking, embeddings, FAISS vector search, LangGraph orchestration, LLM inference, and SQLite-backed conversational memory.",
+      "Multi-agent RAG platform supporting document ingestion, chunking, Hugging Face embeddings, FAISS vector search, LangGraph orchestration, LLM inference, and SQLite-backed conversational memory.",
+
     tags: [
       {
         name: "RAG",
@@ -241,13 +216,18 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://research-agent-rag-1.onrender.com",
+
+    image: github,
+
+    source_code_link:
+      "https://research-agent-rag-1.onrender.com",
   },
+
   {
     name: "Serverless Cloud Cost Optimizer",
     description:
-      "IEEE-published AWS cloud cost optimization and monitoring system using CloudWatch metrics, Cost Explorer API, FastAPI, Boto3, and a Flutter-based analytics dashboard.",
+      "IEEE-published cloud cost optimization and monitoring system using AWS CloudWatch, Cost Explorer API, FastAPI, Boto3, and a Flutter-based analytics dashboard.",
+
     tags: [
       {
         name: "AWS",
@@ -262,13 +242,18 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://doi.org/10.1109/ICNTE66387.2026.11437513",
+
+    image: github,
+
+    source_code_link:
+      "https://doi.org/10.1109/ICNTE66387.2026.11437513",
   },
+
   {
     name: "AI Job Helper",
     description:
-      "AI-powered job assistance platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support using Google Gemini API and Streamlit.",
+      "AI-powered job assistance platform for resume analysis, ATS optimization, skill-gap recommendations, and job-search support using Google Gemini and Streamlit.",
+
     tags: [
       {
         name: "Gemini",
@@ -283,13 +268,18 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://ai-job-helper.onrender.com",
+
+    image: github,
+
+    source_code_link:
+      "https://ai-job-helper.onrender.com",
   },
+
   {
     name: "Escrowwall",
     description:
-      "Secure freelancer escrow payments platform with hold-release payment logic, RBAC, transaction verification workflows, Supabase backend, and Razorpay integration.",
+      "Secure freelancer escrow payments platform featuring hold-release payment logic, RBAC, transaction verification workflows, Supabase, and Razorpay integration.",
+
     tags: [
       {
         name: "React",
@@ -304,13 +294,18 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://escrowwall.online",
+
+    image: github,
+
+    source_code_link:
+      "https://escrowwall.online",
   },
+
   {
     name: "Fluent-flow",
     description:
-      "Interactive language learning web application built with Next.js and TypeScript, focused on responsive UI, learning flows, and modern frontend development.",
+      "Interactive language-learning web application built with Next.js and TypeScript, featuring responsive learning flows and modern frontend development.",
+
     tags: [
       {
         name: "NextJS",
@@ -325,9 +320,18 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://fluent-flow-production.vercel.app/",
+
+    image: github,
+
+    source_code_link:
+      "https://fluent-flow-production.vercel.app/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+};
