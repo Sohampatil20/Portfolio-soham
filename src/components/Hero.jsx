@@ -10,33 +10,28 @@ const Hero = () => {
       className="relative w-full h-screen mx-auto overflow-hidden"
       style={{
         backgroundColor: "#050816",
+        backgroundImage: `linear-gradient(90deg, rgba(5,8,22,0.88), rgba(5,8,22,0.45), rgba(5,8,22,0.78)), url(${herobg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
       }}
     >
-      {/* Background image */}
-      <img
-        src={herobg}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{
-          zIndex: 0,
-        }}
-      />
-
-      {/* Dark overlay */}
+      {/* 3D computer model */}
       <div
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(90deg, rgba(5,8,22,0.88), rgba(5,8,22,0.45), rgba(5,8,22,0.78))",
-          zIndex: 1,
+          zIndex: 10,
+          pointerEvents: "none",
         }}
-      />
+      >
+        <ComputersCanvas />
+      </div>
 
       {/* Hero text */}
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
         style={{
-          zIndex: 4,
+          zIndex: 20,
         }}
       >
         <div className="flex flex-col justify-center items-center mt-5">
@@ -56,22 +51,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3D model */}
-      <div
-        className="absolute inset-0"
-        style={{
-          zIndex: 3,
-          pointerEvents: "none",
-        }}
-      >
-        <ComputersCanvas />
-      </div>
-
       {/* Scroll indicator */}
       <div
         className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"
         style={{
-          zIndex: 5,
+          zIndex: 30,
         }}
       >
         <a href="#about">
