@@ -6,12 +6,18 @@ import herobg from "../assets/herobg.png";
 
 const Hero = () => {
   return (
-    <section
-      className="relative w-full h-screen mx-auto overflow-hidden bg-cover bg-no-repeat bg-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.35), rgba(5, 8, 22, 0.65)), url(${herobg})`,
-      }}
-    >
+    <section className="relative w-full h-screen mx-auto overflow-hidden bg-primary">
+      {/* Hero background image */}
+      <img
+        src={herobg}
+        alt="hero background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
+
+      {/* Dark overlay so text and 3D model are visible */}
+      <div className="absolute inset-0 bg-[#050816]/55 z-[1]" />
+
+      {/* Hero text */}
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-20`}
       >
@@ -32,10 +38,12 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* 3D computer model */}
       <div className="absolute inset-0 z-10">
         <ComputersCanvas />
       </div>
 
+      {/* Scroll indicator */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
