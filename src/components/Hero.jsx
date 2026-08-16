@@ -6,20 +6,38 @@ import herobg from "../assets/herobg.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto overflow-hidden bg-primary">
-      {/* Hero background image */}
+    <section
+      className="relative w-full h-screen mx-auto overflow-hidden"
+      style={{
+        backgroundColor: "#050816",
+      }}
+    >
+      {/* Background image */}
       <img
         src={herobg}
-        alt="hero background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{
+          zIndex: 0,
+        }}
       />
 
-      {/* Dark overlay so text and 3D model are visible */}
-      <div className="absolute inset-0 bg-[#050816]/55 z-[1]" />
+      {/* Dark overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(5,8,22,0.88), rgba(5,8,22,0.45), rgba(5,8,22,0.78))",
+          zIndex: 1,
+        }}
+      />
 
       {/* Hero text */}
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-20`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        style={{
+          zIndex: 4,
+        }}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -38,13 +56,24 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3D computer model */}
-      <div className="absolute inset-0 z-10">
+      {/* 3D model */}
+      <div
+        className="absolute inset-0"
+        style={{
+          zIndex: 3,
+          pointerEvents: "none",
+        }}
+      >
         <ComputersCanvas />
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30">
+      <div
+        className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"
+        style={{
+          zIndex: 5,
+        }}
+      >
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
