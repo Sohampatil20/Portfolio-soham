@@ -9,11 +9,11 @@ const Hero = () => {
     <section
       className="relative w-full h-screen mx-auto overflow-hidden bg-cover bg-no-repeat bg-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.35), rgba(5, 8, 22, 0.55)), url(${herobg})`,
+        backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.35), rgba(5, 8, 22, 0.65)), url(${herobg})`,
       }}
     >
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-20`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -32,11 +32,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-0">
+      <div className="absolute inset-0 z-10">
         <ComputersCanvas />
       </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
